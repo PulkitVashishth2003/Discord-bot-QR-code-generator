@@ -23,6 +23,19 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f"Logged in as {bot.user}")
 
+
+@bot.event
+async def on_message(message):
+    # This ignores messages sent by the bot itself to avoid infinite loops
+    if message.author == bot.user:
+        return
+
+    print(f"I saw a message from {message.author}: {message.content}")
+    
+    # CRITICAL: This line allows your !qr command to still work
+    await bot.process_commands(message) 
+# -------------
+
 @bot.command()
 async def qr(ctx, *, text: str = None):
     """
