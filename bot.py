@@ -4,6 +4,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from urllib.parse import quote
 
+
 # Load environment variables
 load_dotenv()
 
