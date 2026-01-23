@@ -82,7 +82,6 @@ Pulkit Vashishth
 Aspiring Software Engineer | Python & Automation Enthusiast
 
 ⭐ Why This Project Matters
-
 This project showcases:
 • Practical Discord bot development
 • API integration skills
